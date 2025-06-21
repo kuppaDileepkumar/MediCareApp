@@ -13,7 +13,7 @@ const LoginRegister = () => {
     const endpoint = isLogin ? "/login" : "/register";
 
     try {
-      const response = await axios.post(`http://localhost:5000/api/auth${endpoint}`, {
+      const response = await axios.post(`https://medicareapp-zo1b.onrender.com/api/auth${endpoint}`, {
         username,
         password,
       });
