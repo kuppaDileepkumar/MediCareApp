@@ -1,0 +1,49 @@
+### Register a new user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "kumar",
+  "password": "mypassword123"
+}
+
+
+### Login user
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "kumar",
+  "password": "mypassword123"
+}
+
+### Get all medications (after login)
+GET http://localhost:5000/api/medications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUwNDkxMjk5LCJleHAiOjE3NTA1Nzc2OTl9.14c5AQ6uWOmQALW7E21rypJJmWQdcMILHnhgdJtMaOs
+
+
+### Add a medication
+POST http://localhost:5000/api/medications
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUwNDg5NjM0LCJleHAiOjE3NTA1NzYwMzR9.piIxaKL8O2twor57ZHoATBLLJt4xWeWrz2rNLL2ORT8
+Content-Type: application/json
+
+{
+  "name": "Paracetamol",
+  "dosage": "500mg",
+  "frequency": "Twice a day"
+}
+
+### Update a medication
+PUT http://localhost:5000/api/medications/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUwNDg5NjM0LCJleHAiOjE3NTA1NzYwMzR9.piIxaKL8O2twor57ZHoATBLLJt4xWeWrz2rNLL2ORT8
+Content-Type: application/json
+
+{
+  "name": "Paracetamol",
+  "dosage": "650mg",
+  "frequency": "Once a day"
+}
+
+### Delete a medication
+DELETE http://localhost:5000/api/medications/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUwNDg5NjM0LCJleHAiOjE3NTA1NzYwMzR9.piIxaKL8O2twor57ZHoATBLLJt4xWeWrz2rNLL2ORT8
